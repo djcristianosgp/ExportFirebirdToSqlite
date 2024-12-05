@@ -32,6 +32,8 @@ namespace ExportFirebirdToSqlite
 
                         foreach (var tableName in tableNames)
                         {
+                            if (String.IsNullOrEmpty(tableName))
+                                continue;
 
                             // Atualizar label de progresso de tabelas
                             tableProgressLabel.Text = $"Tabela: {tableName} - {(tableProgressBar.Value * 100) / tableProgressBar.Maximum}%";
@@ -222,7 +224,12 @@ namespace ExportFirebirdToSqlite
         }
         private async void Executar_Click(object sender, EventArgs e)
         {
-            var lista = new List<string>(txtTabelas.Text.ToUpper().Split(','));
+            var lista = new List<string>(
+                txtTabelas.Text.ToUpper()
+                .Split(',')
+                .Select(item => item.Trim())
+                .Where(item => !string.IsNullOrEmpty(item))
+            );
             await MigrateTables(txtStringFirebird.Text, txtStringSQLITE.Text, lista, pbTabelas, pbResgistros, lblProgressoTabela, lblProgressoRegistros);
         }
     }

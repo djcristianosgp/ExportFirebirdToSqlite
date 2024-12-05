@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MigrarTabelas));
             pbResgistros = new ProgressBar();
             Executar = new Button();
             txtStringSQLITE = new TextBox();
@@ -66,7 +65,7 @@
             txtStringSQLITE.Name = "txtStringSQLITE";
             txtStringSQLITE.Size = new Size(668, 23);
             txtStringSQLITE.TabIndex = 12;
-            txtStringSQLITE.Text = "Data Source=C:\\RGSystem\\BD\\DadosDevexpress.sqlite;Version=3;";
+            txtStringSQLITE.Text = "Data Source=C:\\Dados.sqlite;Version=3;";
             // 
             // txtStringFirebird
             // 
@@ -74,14 +73,14 @@
             txtStringFirebird.Name = "txtStringFirebird";
             txtStringFirebird.Size = new Size(668, 23);
             txtStringFirebird.TabIndex = 11;
-            txtStringFirebird.Text = "Server=localhost;Database=VARGEMALTALOCAL;User=SYSDBA;Password=masterkey;";
+            txtStringFirebird.Text = "Server=localhost;Database=C:\\BancoTeste.FDB;User=SYSDBA;Password=masterkey;";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(12, 89);
             label3.Name = "label3";
-            label3.Size = new Size(46, 15);
+            label3.Size = new Size(45, 15);
             label3.TabIndex = 10;
             label3.Text = "Tabelas";
             // 
@@ -109,7 +108,7 @@
             txtTabelas.Name = "txtTabelas";
             txtTabelas.Size = new Size(668, 23);
             txtTabelas.TabIndex = 16;
-            txtTabelas.Text = resources.GetString("txtTabelas.Text");
+            txtTabelas.Text = "TAB_CADASTRO_01, TAB_CADASTRO_02, TAB_CADASTRO_03, TAB_CADASTRO_04";
             // 
             // lblProgressoRegistros
             // 
@@ -154,7 +153,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "MigrarTabelas";
-            Text = "MigrarTabelas";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Migrar Tabelas";
             ResumeLayout(false);
             PerformLayout();
         }

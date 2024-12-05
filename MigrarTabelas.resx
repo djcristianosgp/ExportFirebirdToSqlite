@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtTabelas.Text" xml:space="preserve">
-    <value>TSI_CADPAC,VW_TSI_CADPAC,ESUS_FAMILIA,VS_ESTABELECIMENTOS,TSI_MEDICOS,ESUS_MICROAREA,ESUS_EQUIPES,ESUS_ESTABELECIMENTO_SAUDE,TSI_LOGRADOURO,TSI_BAIRRO,TSI_CIDADE,TSI_ESTADO,TSI_UNIDADE,TSI_PROFIS,TSI_CIDADE,GESTAO_ODONTO,PEP_Atendimento,tsi_medicos,ESUS_EQUIPES,TSI_UNIDADE,PEP_REQUISICAO_EXAME</value>
-  </data>
 </root>
